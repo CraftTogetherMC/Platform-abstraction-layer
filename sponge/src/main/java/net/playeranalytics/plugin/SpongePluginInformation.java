@@ -2,9 +2,12 @@ package net.playeranalytics.plugin;
 
 import org.apache.maven.artifact.versioning.ArtifactVersion;
 import org.spongepowered.plugin.PluginContainer;
+import org.spongepowered.plugin.metadata.model.PluginContributor;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -27,6 +30,24 @@ public class SpongePluginInformation implements PluginInformation {
     @Override
     public File getDataFolder() {
         return dataFolder;
+    }
+
+    @Override
+    public String getName() {
+        return String.valueOf(plugin.metadata().name());
+    }
+
+    @Override
+    public String getDescription() {
+        return String.valueOf(plugin.metadata().description());
+    }
+
+    @Override
+    public List<String> getAuthors() {
+        List<String> authors = new ArrayList<>();
+        for (PluginContributor contributor : plugin.metadata().contributors())
+            authors.add(contributor.name());
+        return authors;
     }
 
     @Override

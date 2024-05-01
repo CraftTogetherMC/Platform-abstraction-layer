@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.List;
 
 public class BukkitPluginInformation implements PluginInformation {
 
@@ -21,6 +22,21 @@ public class BukkitPluginInformation implements PluginInformation {
     @Override
     public File getDataFolder() {
         return plugin.getDataFolder();
+    }
+
+    @Override
+    public String getName() {
+        return plugin.getDescription().getName();
+    }
+
+    @Override
+    public String getDescription() {
+        return plugin.getDescription().getDescription();
+    }
+
+    @Override
+    public List<String> getAuthors() {
+        return plugin.getDescription().getAuthors();
     }
 
     @Override

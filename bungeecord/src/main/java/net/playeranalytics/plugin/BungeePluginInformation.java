@@ -4,6 +4,8 @@ import net.md_5.bungee.api.plugin.Plugin;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BungeePluginInformation implements PluginInformation {
 
@@ -21,6 +23,21 @@ public class BungeePluginInformation implements PluginInformation {
     @Override
     public File getDataFolder() {
         return plugin.getDataFolder();
+    }
+
+    @Override
+    public String getName() { return plugin.getDescription().getName(); }
+
+    @Override
+    public List<String> getAuthors() {
+        List<String> authors = new ArrayList<>();
+        authors.add(plugin.getDescription().getAuthor());
+        return authors;
+    }
+
+    @Override
+    public String getDescription() {
+        return plugin.getDescription().getDescription();
     }
 
     @Override

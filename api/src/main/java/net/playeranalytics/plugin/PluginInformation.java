@@ -3,6 +3,7 @@ package net.playeranalytics.plugin;
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Path;
+import java.util.List;
 
 public interface PluginInformation {
 
@@ -13,6 +14,11 @@ public interface PluginInformation {
     default Path getDataDirectory() {
         return getDataFolder().toPath();
     }
+
+
+    String getName();
+    String getDescription();
+    List<String> getAuthors();
 
     String getVersion();
 

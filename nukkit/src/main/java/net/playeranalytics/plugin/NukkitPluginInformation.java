@@ -4,6 +4,7 @@ import cn.nukkit.plugin.PluginBase;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.List;
 
 public class NukkitPluginInformation implements PluginInformation {
 
@@ -21,6 +22,21 @@ public class NukkitPluginInformation implements PluginInformation {
     @Override
     public File getDataFolder() {
         return plugin.getDataFolder();
+    }
+
+    @Override
+    public String getName() {
+        return plugin.getDescription().getName();
+    }
+
+    @Override
+    public String getDescription() {
+        return plugin.getDescription().getDescription();
+    }
+
+    @Override
+    public List<String> getAuthors() {
+        return plugin.getDescription().getAuthors();
     }
 
     @Override
