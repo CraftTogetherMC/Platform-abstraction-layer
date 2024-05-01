@@ -40,7 +40,7 @@ allprojects {
             url = 'https://repo.velocitypowered.com/snapshots/'
         }
         maven { // Nukkit Repository
-            url = 'https://repo.nukkitx.com/main'
+            url = 'https://repo.opencollab.dev/maven-snapshots'
         }
     }
 }
