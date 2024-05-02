@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>de.crafttogether</groupId>
+  <artifactId>platform-abstraction-layer</artifactId>
+  <version>5.0.0</version>
+  <packaging>pom</packaging>
+
+  <name>platform-abstraction-layer</name>
+  <description>Platform abstraction layer is a library for abstracting away some server platform specific implementations.</description>
+  <url>https://github.com/J0schlZ</url>
+
+  <modules>
+    <module>api</module>
+    <module>bukkit</module>
+    <module>bungeecord</module>
+    <module>velocity</module>
+  </modules>
+</project>
