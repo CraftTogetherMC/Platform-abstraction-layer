@@ -9,42 +9,51 @@ implementations. This allows users of this API to use other libraries without wo
 ### Supported Minecraft server-platforms
 
 - [Spigot](https://www.spigotmc.org/)
-- [Sponge](https://www.spongepowered.org/)
-- [Nukkit](https://cloudburstmc.org/)
 - [BungeeCord](https://www.spigotmc.org/wiki/bungeecord/)
 - [Velocity](https://www.velocitypowered.com/)
+  
+### Repository
 
-### Building
-
-```bash
-./gradlew build
+```xml
+    <repository>
+        <id>plan</id>
+        <url>https://maven.craft-together-mc.de/</url>
+    </repository>
 ```
-
 ### Usage
 
-```groovy
-repositories {
-    maven { // Platform abstraction layer repository
-        url = "https://repo.playeranalytics.net/releases"
-    }
-}
+```xml
+    <dependency>
+        <groupId>de.crafttogether</groupId>
+        <artifactId>platform-abstraction-layer-api</artifactId>
+        <version>5.0.0</version>
+        <scope>provided</scope>
+    </dependency>
 
-ext.palVersion = "5.0.0"
+    <!-- Pick your platform(s) -->
+    <dependency>
+        <groupId>de.crafttogether</groupId>
+        <artifactId>platform-abstraction-layer-bukkit</artifactId>
+        <version>5.0.0</version>
+        <scope>provided</scope>
+    </dependency>
 
-dependencies {
-    implementation "net.playeranalytics:platform-abstraction-layer-api:$palVersion"
-    
-    // Pick your platform(s)
-    implementation "net.playeranalytics:platform-abstraction-layer-bukkit:$palVersion"
-    implementation "net.playeranalytics:platform-abstraction-layer-bungeecord:$palVersion"
-    implementation "net.playeranalytics:platform-abstraction-layer-nukkit:$palVersion"
-    implementation "net.playeranalytics:platform-abstraction-layer-sponge:$palVersion"
-    implementation "net.playeranalytics:platform-abstraction-layer-velocity:$palVersion"
-}
+    <dependency>
+        <groupId>de.crafttogether</groupId>
+        <artifactId>platform-abstraction-layer-bungeecord</artifactId>
+        <version>5.0.0</version>
+        <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>de.crafttogether</groupId>
+        <artifactId>platform-abstraction-layer-velocity</artifactId>
+        <version>5.0.0</version>
+        <scope>provided</scope>
+    </dependency>
 ```
-
 Include this library in your project and shade/shadow the library classes into the final artifact.  
-Relocate `net.playeranalytics.plugin` to a different location to avoid conflicts.
+Relocate `de.crafttogether.common.plugin` to a different location to avoid conflicts.
 
 Access the API:
 
@@ -53,10 +62,6 @@ PlatformAbstractionLayer layer;
 
 // org.bukkit.plugin.java.JavaPlugin
 layer = new BukkitPlatformLayer(javaPlugin); 
-// Object (has @Plugin annotation), File, org.slf4j.Logger
-layer = new SpongePlatformLayer(plugin, dataFolder, logger); 
-// cn.nukkit.plugin.PluginBase
-layer = new NukkitPlatformLayer(pluginBase);
 // net.md_5.bungee.api.plugin.Plugin
 layer = new BungeePlatformLayer(plugin);
 // Object (has @Plugin annotation), ProxyServer, org.slf4j.Logger, Path
