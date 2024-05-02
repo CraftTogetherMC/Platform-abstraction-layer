@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <copy file="target/platform-abstraction-layer-api-5.0.0.jar" tofile="target/static/platform-abstraction-layer-api.jar" />
+    <copy file="target/platform-abstraction-layer-api-5.0.0.jar" tofile="target/static/platform-abstraction-layer-api-5.0.0-NO-CI.jar" />
+  </target>
+</project>

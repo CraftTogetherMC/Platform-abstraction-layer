@@ -1,0 +1,6 @@
+de\crafttogether\common\plugin\BukkitPlatformLayer.class
+de\crafttogether\common\plugin\BukkitPluginInformation.class
+de\crafttogether\common\plugin\scheduling\UnscheduledBukkitTask.class
+de\crafttogether\common\plugin\scheduling\BukkitRunnableFactory.class
+de\crafttogether\common\plugin\scheduling\BukkitTask.class
+de\crafttogether\common\plugin\server\BukkitListeners.class

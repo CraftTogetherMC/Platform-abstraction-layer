@@ -1,0 +1,6 @@
+de\crafttogether\common\plugin\server\BungeeListeners.class
+de\crafttogether\common\plugin\scheduling\BungeeRunnableFactory.class
+de\crafttogether\common\plugin\BungeePlatformLayer.class
+de\crafttogether\common\plugin\scheduling\BungeeTask.class
+de\crafttogether\common\plugin\scheduling\UnscheduledBungeeTask.class
+de\crafttogether\common\plugin\BungeePluginInformation.class

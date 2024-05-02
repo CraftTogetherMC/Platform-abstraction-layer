@@ -1,0 +1,7 @@
+de\crafttogether\common\plugin\scheduling\VelocityTask.class
+de\crafttogether\common\plugin\scheduling\UnscheduledVelocityTask.class
+de\crafttogether\common\plugin\VelocityPluginInformation.class
+de\crafttogether\common\plugin\server\VelocityListeners.class
+de\crafttogether\common\plugin\server\VelocityPluginLogger.class
+de\crafttogether\common\plugin\VelocityPlatformLayer.class
+de\crafttogether\common\plugin\scheduling\VelocityRunnableFactory.class

@@ -1,0 +1,11 @@
+de\crafttogether\common\plugin\scheduling\RunnableFactory.class
+de\crafttogether\common\plugin\scheduling\TimeAmount.class
+de\crafttogether\common\plugin\server\JavaUtilPluginLogger.class
+de\crafttogether\common\plugin\PluginInformation.class
+de\crafttogether\common\plugin\scheduling\Task.class
+de\crafttogether\common\plugin\server\Listeners.class
+de\crafttogether\common\plugin\scheduling\UnscheduledTask.class
+de\crafttogether\common\plugin\PlatformAbstractionLayer.class
+de\crafttogether\common\plugin\player\UUIDFetcher.class
+de\crafttogether\common\plugin\scheduling\PluginRunnable.class
+de\crafttogether\common\plugin\server\PluginLogger.class
