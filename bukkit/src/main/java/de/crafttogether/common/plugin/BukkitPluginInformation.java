@@ -1,9 +1,12 @@
 package de.crafttogether.common.plugin;
 
+import org.bukkit.configuration.Configuration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 
 public class BukkitPluginInformation implements PluginInformation {
@@ -42,5 +45,16 @@ public class BukkitPluginInformation implements PluginInformation {
     @Override
     public String getVersion() {
         return plugin.getDescription().getVersion();
+    }
+
+    @Override
+    public String getBuild() {
+        InputStream inputStream = plugin.getResource("plugin.yml");
+
+        if (inputStream == null)
+            return null;
+
+        Configuration pluginDescription = YamlConfiguration.loadConfiguration(new InputStreamReader(inputStream));
+        return pluginDescription.get("build") == null ? "unkown" : String.valueOf(pluginDescription.get("build"));
     }
 }

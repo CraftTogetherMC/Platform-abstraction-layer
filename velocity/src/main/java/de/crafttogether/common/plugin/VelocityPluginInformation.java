@@ -47,4 +47,10 @@ public class VelocityPluginInformation implements PluginInformation {
     public String getVersion() {
         return plugin.getClass().getAnnotation(Plugin.class).version();
     }
+
+    @Override
+    public String getBuild() {
+        // TODO: Find a solution to ship the buildnumber
+        return null;
+    }
 }

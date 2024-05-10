@@ -21,5 +21,5 @@ public interface PluginInformation {
     List<String> getAuthors();
 
     String getVersion();
-
+    String getBuild();
 }

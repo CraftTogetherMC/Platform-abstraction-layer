@@ -1,6 +1,9 @@
 package de.crafttogether.common.plugin;
 
 import net.md_5.bungee.api.plugin.Plugin;
+import net.md_5.bungee.config.Configuration;
+import net.md_5.bungee.config.ConfigurationProvider;
+import net.md_5.bungee.config.YamlConfiguration;
 
 import java.io.File;
 import java.io.InputStream;
@@ -43,5 +46,16 @@ public class BungeePluginInformation implements PluginInformation {
     @Override
     public String getVersion() {
         return plugin.getDescription().getVersion();
+    }
+
+    @Override
+    public String getBuild() {
+        InputStream inputStream = plugin.getResourceAsStream("bungee.yml");
+
+        if (inputStream == null)
+            return null;
+
+        Configuration pluginDescription = ConfigurationProvider.getProvider(YamlConfiguration.class).load(inputStream);
+        return pluginDescription.get("build") == null ? "unkown" : String.valueOf(pluginDescription.get("build"));
     }
 }
