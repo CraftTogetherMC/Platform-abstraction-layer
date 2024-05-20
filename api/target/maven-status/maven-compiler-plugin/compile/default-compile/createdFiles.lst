@@ -1,3 +1,4 @@
+de\crafttogether\common\plugin\Platform.class
 de\crafttogether\common\plugin\scheduling\RunnableFactory.class
 de\crafttogether\common\plugin\scheduling\TimeAmount.class
 de\crafttogether\common\plugin\server\JavaUtilPluginLogger.class

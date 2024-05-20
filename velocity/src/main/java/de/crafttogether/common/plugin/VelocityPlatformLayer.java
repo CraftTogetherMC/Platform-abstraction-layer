@@ -31,6 +31,11 @@ public class VelocityPlatformLayer implements PlatformAbstractionLayer {
     }
 
     @Override
+    public Platform getPlatformType() {
+        return Platform.VELOCITY;
+    }
+
+    @Override
     public PluginLogger getPluginLogger() {
         if (pluginLogger == null) pluginLogger = new VelocityPluginLogger(logger);
         return pluginLogger;
@@ -51,7 +56,7 @@ public class VelocityPlatformLayer implements PlatformAbstractionLayer {
     @Override
     public PluginInformation getPluginInformation() {
         if (pluginInformation == null) {
-            pluginInformation = new VelocityPluginInformation(plugin, dataFolderPath.toFile());
+            pluginInformation = new VelocityPluginInformation(plugin, dataFolderPath.toFile(), logger);
         }
         return pluginInformation;
     }

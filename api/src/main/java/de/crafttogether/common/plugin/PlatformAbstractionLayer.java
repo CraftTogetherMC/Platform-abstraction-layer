@@ -6,6 +6,8 @@ import de.crafttogether.common.plugin.server.PluginLogger;
 
 public interface PlatformAbstractionLayer {
 
+    Platform getPlatformType();
+
     PluginLogger getPluginLogger();
 
     Listeners getListeners();
@@ -14,4 +16,15 @@ public interface PlatformAbstractionLayer {
 
     PluginInformation getPluginInformation();
 
+    default boolean isBukkit() {
+        return getPlatformType().equals(Platform.BUKKIT);
+    }
+
+    default boolean isBungeeCord() {
+        return getPlatformType().equals(Platform.BUNGEECORD);
+    }
+
+    default boolean isVelocity() {
+        return getPlatformType().equals(Platform.VELOCITY);
+    }
 }

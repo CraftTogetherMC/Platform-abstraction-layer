@@ -24,6 +24,13 @@ public class BungeePluginInformation implements PluginInformation {
     }
 
     @Override
+    public File getJarFile() {
+        String fileName = plugin.getClass().getProtectionDomain().getCodeSource().getLocation().getFile();
+        File file = new File(plugin.getDataFolder(), fileName);
+        return file.exists() ? file : null;
+    }
+
+    @Override
     public File getDataFolder() {
         return plugin.getDataFolder();
     }

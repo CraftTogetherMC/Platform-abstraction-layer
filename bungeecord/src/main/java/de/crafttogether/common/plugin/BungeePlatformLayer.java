@@ -23,6 +23,11 @@ public class BungeePlatformLayer implements PlatformAbstractionLayer {
     }
 
     @Override
+    public Platform getPlatformType() {
+        return Platform.BUNGEECORD;
+    }
+
+    @Override
     public PluginLogger getPluginLogger() {
         if (pluginLogger == null) {
             String pluginName = plugin.getDescription().getName();

@@ -23,6 +23,14 @@ public class BukkitPluginInformation implements PluginInformation {
     }
 
     @Override
+    public File getJarFile() {
+        String fileName = plugin.getClass().getProtectionDomain().getCodeSource().getLocation().getFile();
+        plugin.getLogger().warning(fileName);
+        File file = new File(fileName);
+        return file.exists() ? file : null;
+    }
+
+    @Override
     public File getDataFolder() {
         return plugin.getDataFolder();
     }

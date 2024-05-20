@@ -22,6 +22,11 @@ public class BukkitPlatformLayer implements PlatformAbstractionLayer {
     }
 
     @Override
+    public Platform getPlatformType() {
+        return Platform.BUKKIT;
+    }
+
+    @Override
     public PluginLogger getPluginLogger() {
         if (pluginLogger == null) {
             String pluginName = plugin.getDescription().getName();

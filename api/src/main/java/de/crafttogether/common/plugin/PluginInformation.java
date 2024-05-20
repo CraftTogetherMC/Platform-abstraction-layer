@@ -8,9 +8,8 @@ import java.util.List;
 public interface PluginInformation {
 
     InputStream getResourceFromJar(String byName);
-
+    File getJarFile();
     File getDataFolder();
-
     default Path getDataDirectory() {
         return getDataFolder().toPath();
     }
