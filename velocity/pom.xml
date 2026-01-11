@@ -13,7 +13,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <velocity.version>3.3.0-SNAPSHOT</velocity.version>
+        <velocity.version>3.4.0-SNAPSHOT</velocity.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.number>NO-CI</project.build.number>
     </properties>
