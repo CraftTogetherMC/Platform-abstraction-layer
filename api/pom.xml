@@ -6,13 +6,13 @@
 
     <groupId>de.crafttogether</groupId>
     <artifactId>platform-abstraction-layer-api</artifactId>
-    <version>5.0.0</version>
+    <version>5.0.1</version>
     <packaging>jar</packaging>
 
     <name>platform-abstraction-layer-api</name>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.number>NO-CI</project.build.number>
     </properties>

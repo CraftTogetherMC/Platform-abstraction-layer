@@ -6,14 +6,14 @@
 
     <groupId>de.crafttogether</groupId>
     <artifactId>platform-abstraction-layer-bukkit</artifactId>
-    <version>5.0.0</version>
+    <version>5.0.1</version>
     <packaging>jar</packaging>
 
     <name>platform-abstraction-layer-bukkit</name>
 
     <properties>
-        <java.version>21</java.version>
-        <paper.version>1.21.11-R0.1-SNAPSHOT</paper.version>
+        <java.version>25</java.version>
+        <paper.version>[26.2.build,)</paper.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.number>NO-CI</project.build.number>
     </properties>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>de.crafttogether</groupId>
             <artifactId>platform-abstraction-layer-api</artifactId>
-            <version>5.0.0</version>
+            <version>5.0.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
