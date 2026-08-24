@@ -6,7 +6,7 @@
 
     <groupId>de.crafttogether</groupId>
     <artifactId>platform-abstraction-layer-velocity</artifactId>
-    <version>5.0.0</version>
+    <version>5.0.1</version>
     <packaging>jar</packaging>
 
     <name>platform-abstraction-layer-velocity</name>
@@ -49,7 +49,7 @@
         <dependency>
             <groupId>de.crafttogether</groupId>
             <artifactId>platform-abstraction-layer-api</artifactId>
-            <version>5.0.0</version>
+            <version>5.0.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
